@@ -34,8 +34,8 @@ jobs:
     # update/set geckoview chanel and version
     - name: set gecko chanel&ver
       run: |
-        sed -i 's/gkver/${{inputs.gkver}}' app/build.gradle
-        sed -i 's/gkchl/${{inputs.gkchl}}' app/build.gradle
+        sed -i 's/gkver/${{inputs.gkver}}/' app/build.gradle
+        sed -i 's/gkchl/${{inputs.gkchl}}/' app/build.gradle
         cat app/build.gradle
         
   # comment out if you have native code; see the readme
