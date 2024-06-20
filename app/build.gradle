@@ -13,7 +13,7 @@ android {
     }
     defaultConfig {
         applicationId "droid1.kandy"
-        minSdkVersion 18
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 10
         versionName "1.7.3"
