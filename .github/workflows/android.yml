@@ -13,7 +13,11 @@ on:
           required: true
           default: '73.0.20200217142647'
           description: 'version of geckoview'
-        
+        droidx:
+          type: boolean
+          required: true
+          default: false
+          description: 'use androidX'
         
         
 
