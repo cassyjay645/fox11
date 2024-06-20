@@ -11,7 +11,7 @@ on:
         gkver:
           type: string
           required: true
-          default: '73.0.20200217142647'
+          default: '72.0.20200107212822'
           description: 'version of geckoview'
         droidx:
           type: boolean
@@ -20,7 +20,6 @@ on:
           description: 'use androidX'
         
         
-
 jobs:
   build:
 
