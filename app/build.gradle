@@ -50,7 +50,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.mozilla.geckoview:geckoview:69.0.20190903125908"
+    implementation "org.mozilla.geckoview:geckoview:74.0.20200303015310"
     //implementation 'com.hzy:un7zip:+'
     //implementation project(':un7zip')
 }
