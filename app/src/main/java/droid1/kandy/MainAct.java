@@ -30,7 +30,7 @@ public class MainAct extends Activity{
 
         session.open(sRuntime);
         view.setSession(session);
-        session.loadUri("about:buildconfig"); // Or any other URL...
+        session.loadUri("https://github.com/cassyjay645/fox11/"); // Or any other URL...
     }
 
     public void btnperms(View v){
