@@ -3,10 +3,18 @@ name: build fox11 debug
 on:
   workflow_dispatch:
       inputs:
-        version:
+        gkchl:
           type: string
           required: false
-          description: 'fox11 version'
+          default: 'arm64-v8a'
+          description: 'geckoview chanel'
+        gkver:
+          type: string
+          required: true
+          default: '73.0.20200217142647'
+          description: 'version of geckoview'
+        
+        
         
 
 jobs:
@@ -22,6 +30,13 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
+
+    # update/set geckoview chanel and version
+    - name: set gecko chanel&ver
+      run: |
+        sed -i 's/gkver/${{inputs.gkver}}' app/build.gradle
+        sed -i 's/gkchl/${{inputs.gkchl}}' app/build.gradle
+        cat app/build.gradle
         
   # comment out if you have native code; see the readme
   #  - uses: nttld/setup-ndk@v1
@@ -41,5 +56,5 @@ jobs:
     - name: upload
       uses: actions/upload-artifact@v4
       with:
-        name: app-release-V1.7.2.apk
+        name: app-release-${{inputs.gkchl}}-${{inputs.gkver}}.apk
         path: app/build/outputs/apk/release/
